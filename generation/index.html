@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10151b">
+<title>Generation Contractor LLC | General Contractor in Wellington, FL</title>
+<meta name="description" content="Generation Contractor LLC is a general contractor in Wellington, Florida — kitchen and bathroom remodels, whole-home renovations, additions, and outdoor living across Palm Beach County. Call (561) 283-6643 for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* mobile stabilization: one width math for everything, no sideways slide */
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden}
+@supports (overflow-x:clip){html,body{overflow-x:clip}}
+body{overscroll-behavior-x:none}
+img,video,svg{max-width:100%}
+
+:root{
+  --ink:#10151b; --ink2:#151d26; --panel:#1a242f; --steel:#26313e;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.18);
+  --amber:#e8a020; --amber-d:#c98414; --amber-soft:rgba(232,160,32,.14);
+  --txt:#eef1f4; --muted:#a9b5c1; --dim:#75828f;
+  --paper:#f5f2ec; --paper2:#ece7db; --dink:#1b232c; --dmuted:#5b6773;
+}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--txt);font:400 17px/1.65 "Barlow",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--amber);color:#10151b}
+h1,h2,h3{font-family:"Barlow Condensed","Barlow",Arial,sans-serif;font-weight:600;line-height:1.08;margin:0;text-transform:uppercase;letter-spacing:.015em}
+h2{font-size:clamp(2.2rem,5.4vw,3.4rem)}
+a{color:var(--amber)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+section{padding:76px 0;position:relative}
+section[id]{scroll-margin-top:86px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.kicker{display:flex;align-items:center;gap:14px;font-weight:600;text-transform:uppercase;letter-spacing:.3em;font-size:.72rem;color:var(--amber);margin:0 0 18px}
+.kicker::before{content:"";width:38px;height:2px;background:var(--amber);flex:none}
+.kicker.center{justify-content:center}
+.kicker.center::after{content:"";width:38px;height:2px;background:var(--amber);flex:none}
+.sec-head{max-width:740px;margin:0 auto 44px;text-align:center}
+.sec-head .kicker{justify-content:center}
+.sec-head .kicker::after{content:"";width:38px;height:2px;background:var(--amber);flex:none}
+.sec-head p{color:var(--muted);font-size:1.08rem;margin:18px 0 0}
+.btn{display:inline-block;background:var(--amber);color:#14100a;text-decoration:none;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:16px 30px;font-size:.88rem;border:0;border-radius:6px;cursor:pointer;font-family:"Barlow",sans-serif;transition:background .2s ease,transform .2s ease;white-space:nowrap}
+.btn:hover,.btn:focus{background:var(--amber-d);color:#fff;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line2)}
+.btn.ghost:hover,.btn.ghost:focus{border-color:var(--amber);color:var(--amber);background:transparent}
+.btn.sm{padding:12px 22px;font-size:.8rem}
+
+/* ---------- topbar + header ---------- */
+.topbar{background:#0a0e13;color:#c3ccd4;font-size:.86rem;letter-spacing:.04em;position:relative;z-index:61}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:8px;padding-bottom:8px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700}
+.topbar .tb-right{color:var(--dim)}
+@media(max-width:700px){.topbar .tb-right{display:none}}
+.header{position:sticky;top:0;z-index:60;background:rgba(13,18,24,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header .bar{display:flex;justify-content:space-between;align-items:center;min-height:74px;max-width:1280px;margin:0 auto;padding:0 24px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo .mark{width:42px;height:42px;flex:none}
+.logo .lname{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.32rem;line-height:1.02;text-transform:uppercase;letter-spacing:.04em}
+.logo .lname span{display:block;font-size:.78rem;font-weight:600;letter-spacing:.34em;color:var(--amber)}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.84rem;transition:color .25s}
+.nav a:hover{color:#fff}
+.nav a.call{border:1px solid rgba(232,160,32,.55);color:var(--amber);padding:10px 18px;border-radius:6px}
+.nav a.call:hover{background:var(--amber);color:#14100a}
+.toggle{display:none;background:none;border:0;cursor:pointer;padding:10px}
+.toggle span{display:block;width:28px;height:2px;background:#fff;margin:6px 0}
+@media(max-width:880px){.nav a:not(.call){display:none}.toggle{display:block}}
+@media(max-width:460px){.nav a.call{display:none}.logo .lname{font-size:1.14rem}}
+.menu{position:fixed;inset:0;background:var(--ink2);z-index:80;display:none;flex-direction:column;padding:26px 30px}
+.menu.open{display:flex}
+.menu .m-top{display:flex;justify-content:space-between;align-items:center}
+.menu .m-brand{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.5rem;text-transform:uppercase;color:#fff;text-decoration:none;letter-spacing:.04em}
+.menu .m-brand span{color:var(--amber)}
+.menu .mclose{background:none;border:0;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1;padding:6px}
+.menu nav{margin-top:52px;display:flex;flex-direction:column;gap:24px}
+.menu nav a{font-family:"Barlow Condensed",sans-serif;font-size:2.1rem;font-weight:600;text-transform:uppercase;color:#fff;text-decoration:none}
+.menu nav a:hover{color:var(--amber)}
+.menu .m-call{margin-top:auto;font-size:1.05rem;color:var(--muted)}
+.menu .m-call a{color:var(--amber);font-weight:700;text-decoration:none;font-size:1.25rem}
+
+/* ---------- hero ---------- */
+.hero{padding:92px 0 84px;overflow:hidden;background:
+  radial-gradient(900px 460px at 82% -10%,rgba(232,160,32,.13),transparent 60%),
+  linear-gradient(180deg,#131a22 0%,var(--ink) 78%)}
+.hero .grid-bg{position:absolute;inset:0;background:
+  repeating-linear-gradient(0deg,rgba(255,255,255,.028) 0 1px,transparent 1px 56px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.028) 0 1px,transparent 1px 56px);
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 18%,#000 78%,transparent);mask-image:linear-gradient(180deg,transparent,#000 18%,#000 78%,transparent)}
+.hero .frame-art{position:absolute;right:-30px;bottom:-8px;width:min(520px,58vw);opacity:.16;z-index:1;pointer-events:none}
+.hero h1{font-size:clamp(2.9rem,7.6vw,5.3rem);font-weight:700;max-width:900px}
+.hero h1 .amp{color:var(--amber)}
+.hero .sub{color:var(--muted);font-size:clamp(1.06rem,2vw,1.24rem);max-width:680px;margin:24px 0 0;line-height:1.6}
+.hero .sub b{color:var(--txt);font-weight:600}
+.hero .ctas{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.hero .ctas .btn{font-size:.95rem;padding:17px 32px}
+.trust{display:flex;flex-wrap:wrap;gap:0;margin:52px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:960px}
+.trust span{padding:15px 24px 15px 0;margin-right:24px;color:var(--muted);font-size:.94rem;display:flex;align-items:center;gap:10px}
+.trust span::before{content:"";width:7px;height:7px;background:var(--amber);transform:rotate(45deg);flex:none}
+.trust b{color:var(--txt);font-weight:600}
+@media(max-width:640px){.hero{padding:64px 0 60px}.trust span{padding:11px 0;margin-right:18px}}
+
+/* ---------- services (light) ---------- */
+.services{background:var(--paper);color:var(--dink)}
+.services .sec-head p{color:var(--dmuted)}
+.services .kicker{color:var(--amber-d)}
+.services .kicker::before,.services .kicker::after{background:var(--amber-d)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1120px;margin:0 auto}
+.svc{background:#fff;border:1px solid #e2dccd;border-radius:10px;padding:32px 28px 30px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.svc:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(27,35,44,.10);border-color:rgba(201,132,20,.5)}
+.svc .ic{width:52px;height:52px;border-radius:10px;background:var(--amber-soft);display:grid;place-items:center;margin-bottom:20px}
+.svc .ic svg{width:26px;height:26px;fill:var(--amber-d)}
+.svc h3{font-size:1.42rem;color:var(--dink);margin-bottom:10px}
+.svc p{margin:0;color:var(--dmuted);font-size:.99rem;line-height:1.6}
+@media(max-width:920px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- why choose us ---------- */
+.why{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start;max-width:1120px;margin:0 auto}
+.why-copy h2{margin-bottom:20px}
+.why-copy>p{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+.why-copy>p b{color:var(--txt)}
+.why-list{list-style:none;margin:30px 0 0;padding:0}
+.why-list li{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.why-list .n{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:600;font-size:1.3rem;color:var(--amber);line-height:1.2;flex:none;width:34px}
+.why-list h3{font-size:1.18rem;margin-bottom:5px}
+.why-list p{margin:0;color:var(--muted);font-size:.98rem}
+.call-card{background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:36px 34px;position:sticky;top:104px}
+.call-card .cc-k{font-weight:600;letter-spacing:.28em;font-size:.7rem;text-transform:uppercase;color:var(--amber);margin:0 0 14px}
+.call-card h3{font-size:1.7rem;margin-bottom:12px}
+.call-card p{color:var(--muted);margin:0 0 24px}
+.call-card .big{font-family:"Barlow Condensed",sans-serif;font-size:2rem;font-weight:700;letter-spacing:.02em}
+.call-card .big a{color:#fff;text-decoration:none}
+.call-card .big a:hover{color:var(--amber)}
+.call-card .btn{margin-top:22px;width:100%;text-align:center}
+.call-card .hrs{margin:22px 0 0;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.94rem;line-height:1.75}
+.call-card .hrs b{color:var(--txt);font-weight:600}
+@media(max-width:920px){.why-grid{grid-template-columns:1fr}.call-card{position:static}}
+
+/* ---------- process (light) ---------- */
+.process{background:var(--paper2);color:var(--dink)}
+.process .sec-head p{color:var(--dmuted)}
+.process .kicker{color:var(--amber-d)}
+.process .kicker::before,.process .kicker::after{background:var(--amber-d)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1120px;margin:0 auto}
+.step{border-top:3px solid var(--amber-d);padding:24px 2px 0}
+.step .n{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:600;font-size:1.6rem;color:var(--amber-d);line-height:1}
+.step h3{font-size:1.22rem;margin:14px 0 8px;color:var(--dink)}
+.step p{margin:0;color:var(--dmuted);font-size:.97rem}
+@media(max-width:920px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.steps{grid-template-columns:1fr}}
+
+/* ---------- service area ---------- */
+.areas{background:var(--ink)}
+.areas .lead{color:var(--muted);font-size:1.08rem;max-width:720px;margin:18px 0 0}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px;max-width:1000px}
+.towns span{border:1px solid var(--line2);border-radius:999px;padding:9px 18px;font-weight:600;font-size:.92rem;letter-spacing:.05em;color:var(--txt)}
+.towns span.home{border-color:var(--amber);color:var(--amber);background:var(--amber-soft)}
+.areas .note{color:var(--dim);margin:26px 0 0;font-size:.95rem}
+
+/* ---------- contact ---------- */
+.contact{background:#1b2531 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M0 55.5h56M55.5 0v56' stroke='rgba(255,255,255,0.045)' stroke-width='1'/%3E%3C/svg%3E") repeat}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;max-width:1080px;margin:0 auto;align-items:start}
+.c-info h2{margin-bottom:20px}
+.c-info>p{color:var(--muted);margin:0 0 16px;font-size:1.05rem}
+.c-info .row{padding:18px 0;border-top:1px solid var(--line)}
+.c-info .row .lab{font-weight:600;letter-spacing:.26em;font-size:.68rem;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:6px}
+.c-info .row p{margin:0;color:var(--txt);font-size:1.05rem;line-height:1.6}
+.c-info .row a{color:#fff;text-decoration:none;font-weight:600}
+.c-info .row a:hover{color:var(--amber)}
+form label{display:block;font-weight:600;text-transform:uppercase;font-size:.78rem;letter-spacing:.14em;margin:24px 0 9px;color:var(--txt)}
+form label .req{font-weight:400;text-transform:none;letter-spacing:0;color:var(--dim);font-size:.86rem}
+form .sub{display:block;font-weight:400;text-transform:none;letter-spacing:0;font-size:.9rem;color:var(--dim);margin-bottom:7px}
+form input,form textarea,form select{width:100%;border:1px solid #39434e;background:#fff;color:#1b232c;font:400 1rem "Barlow",sans-serif;padding:14px;border-radius:6px}
+form input:focus,form textarea:focus,form select:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(232,160,32,.3);outline:none}
+form textarea{min-height:132px;resize:vertical}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.f-row{grid-template-columns:1fr}}
+form .btn{margin-top:28px}
+.form-msg{margin-top:16px;font-weight:600;display:none}
+.form-msg.ok{display:block;color:#b6dd8f}
+.form-msg.err{display:block;color:#ffb3a7}
+@media(max-width:880px){.contact-grid{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+.footer{background:#0a0e13;border-top:1px solid var(--line);padding:52px 0 40px;text-align:center}
+.footer .flogo{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.9rem;text-transform:uppercase;letter-spacing:.04em;color:#fff}
+.footer .flogo span{color:var(--amber)}
+.footer p{color:var(--muted);margin:12px 0 0}
+.footer a{color:var(--amber);text-decoration:none;font-weight:700}
+.footer .f-areas{color:var(--dim);font-size:.9rem;line-height:1.8;max-width:820px;margin:22px auto 0}
+.footer .fine{color:#525d68;font-size:.82rem;margin-top:28px;letter-spacing:.05em}
+
+/* ---------- chat widget ---------- */
+.chat-btn{position:fixed;right:20px;bottom:20px;z-index:70;width:60px;height:60px;border-radius:50%;border:0;background:var(--amber);color:#14100a;cursor:pointer;box-shadow:0 14px 32px rgba(0,0,0,.5);display:grid;place-items:center;transition:transform .2s,background .2s}
+.chat-btn:hover{transform:translateY(-2px);background:var(--amber-d)}
+.chat-btn svg{width:27px;height:27px;fill:#14100a}
+.chat-panel{position:fixed;right:20px;bottom:92px;z-index:70;width:min(360px,calc(100vw - 40px));background:var(--ink2);border:1px solid var(--line2);border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.55);display:none;overflow:hidden}
+.chat-panel.open{display:block}
+.chat-panel .cp-head{background:var(--panel);border-bottom:1px solid var(--line);padding:16px 18px}
+.chat-panel .cp-head b{text-transform:uppercase;font-size:.98rem;letter-spacing:.06em;display:block;color:#fff;font-family:"Barlow Condensed",sans-serif;font-size:1.15rem}
+.chat-panel .cp-head span{font-size:.9rem;color:var(--muted)}
+.chat-panel form{padding:4px 18px 20px}
+.chat-panel form label{margin-top:16px}
+.chat-panel form .btn{width:100%;margin-top:20px}
+
+/* ---------- sticky mobile call bar ---------- */
+.callbar{display:none}
+@media(max-width:860px){
+  .callbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--amber);color:#14100a;text-align:center;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;padding:15px 10px;text-decoration:none;box-shadow:0 -6px 24px rgba(0,0,0,.35)}
+  .chat-btn{bottom:76px}
+  .chat-panel{bottom:148px}
+  .footer{padding-bottom:104px}
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .btn,.svc,.chat-btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><span>&#128222; <a href="tel:+15612836643">(561) 283-6643</a></span><span class="tb-right">Wellington, Florida &middot; Serving Palm Beach County</span></div></div>
+
+<header class="header">
+  <div class="bar">
+    <a class="logo" href="#top" aria-label="Generation Contractor LLC — home">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="8" fill="#e8a020"/><path d="M10 30 L24 15 L38 30" fill="none" stroke="#10151b" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 27.5 V36 H22 V29 H26 V36 H33 V27.5" fill="none" stroke="#10151b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="lname">Generation Contractor<span>LLC &middot; Wellington, FL</span></span>
+    </a>
+    <button class="toggle" id="toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#areas">Service Area</a>
+      <a href="#contact">Contact</a>
+      <a class="call" href="#contact">Get a Free Quote</a>
+    </nav>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="m-top">
+    <a class="m-brand" href="#top">Generation <span>Contractor</span></a>
+    <button class="mclose" id="mclose" type="button" aria-label="Close menu">&times;</button>
+  </div>
+  <nav aria-label="Mobile navigation">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#process">How It Works</a>
+    <a href="#areas">Service Area</a>
+    <a href="#contact">Get a Free Quote</a>
+  </nav>
+  <p class="m-call">Call us: <a href="tel:+15612836643">(561) 283-6643</a></p>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <svg class="frame-art" viewBox="0 0 300 210" aria-hidden="true" fill="none" stroke="#e8a020" stroke-width="2">
+    <path d="M20 190 H280 M40 190 V90 M40 90 L150 25 L260 90 V190 M40 90 H260 M95 190 V130 H150 V190 M150 130 H205 V190 M95 130 H205 M40 140 H95 M205 140 H260"/>
+    <path d="M150 25 V60 M118 42 L150 60 L182 42" stroke-dasharray="5 6"/>
+  </svg>
+  <div class="wrap">
+    <p class="kicker rv">Wellington, Florida &middot; General Contractor</p>
+    <h1 class="rv">Generation Contractor <span class="amp">LLC</span></h1>
+    <p class="sub rv">Kitchen and bathroom remodels, whole-home renovations, additions, and outdoor living — <b>planned carefully, built cleanly, and finished on schedule</b> for homeowners across Palm Beach County.</p>
+    <div class="ctas rv">
+      <a class="btn" href="tel:+15612836643">&#128222; Call (561) 283-6643</a>
+      <a class="btn ghost" href="#contact">Get a Free Quote</a>
+    </div>
+    <div class="trust rv">
+      <span><b>Wellington-based</b> &amp; local</span>
+      <span><b>Free</b> on-site estimates</span>
+      <span><b>One crew</b> — start to finish</span>
+      <span><b>Kitchens &middot; Baths &middot; Additions</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">What we do</p>
+      <h2>Our Services</h2>
+      <p>From a single bathroom to a full renovation, one contractor handles the whole job — design decisions, permits, trades, and the final walkthrough.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h7v8H4zM13 3h7v8h-7zM4 13h7v8H4zM13 13h7v8h-7z" fill-rule="evenodd" opacity=".0"/><path d="M3 4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm10 0a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1zM3 14a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm10 0a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1z"/></svg></div>
+        <h3>Kitchen Remodeling</h3>
+        <p>New layouts, cabinets, countertops, tile, lighting, and flooring — a kitchen built around how your family actually cooks and gathers.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16a1 1 0 0 1 1 1 7 7 0 0 1-7 7h-4a7 7 0 0 1-7-7 1 1 0 0 1 1-1zm2 2v1a5 5 0 0 0 5 5h2a5 5 0 0 0 5-5v-1zM6 12V6a4 4 0 0 1 8 0h-2a2 2 0 0 0-2-2H8v8zM5 21h2v1.5H5zM17 21h2v1.5h-2z" transform="translate(0 -1)"/></svg></div>
+        <h3>Bathroom Remodeling</h3>
+        <p>Showers, tubs, vanities, tile, and fixtures — from a clean refresh to a full primary-suite transformation, done with care around your plumbing.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 8h-3v9a1 1 0 0 1-1 1h-4v-6H11v6H7a1 1 0 0 1-1-1v-9H3zm0-2.7L1 10h2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V10h2z" transform="scale(.92) translate(1 1)"/></svg></div>
+        <h3>Whole-Home Renovations</h3>
+        <p>Room-by-room or top-to-bottom: flooring, drywall, paint, trim, and layout changes that make an older home live like new.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 11h-4V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2zM5 5h8v14H5zm10 8h4v6h-4zM7 8h4v2H7zm0 4h4v2H7z"/></svg></div>
+        <h3>Home Additions</h3>
+        <p>Extra bedrooms, in-law suites, garage conversions, and expanded living space — designed to match your home and built to code.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.2-2.6 5.4-.9.8-1.4 2.1-1.4 3.6H9c0-1.5-.5-2.8-1.4-3.6C6.2 13.2 5 11.4 5 9a7 7 0 0 1 7-7zM9 20h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z" transform="scale(.95) translate(.6 .4)"/></svg></div>
+        <h3>Outdoor Living</h3>
+        <p>Patios, lanais, outdoor kitchens, and covered spaces built for Florida weather — and for the way Wellington lives outside.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 6.3l-4-4a1 1 0 0 0-1.4 0L14 5.6 18.4 10l3.3-3.3a1 1 0 0 0 1-1.4zM12.6 7L3 16.6V21h4.4L17 11.4zM2 2h3v3H4V3H2zm18 18h-3v-1h2v-2h1z" transform="scale(.94) translate(.7 .7)"/></svg></div>
+        <h3>Repairs &amp; Custom Projects</h3>
+        <p>Drywall, carpentry, flooring, and the punch-list projects other contractors won't return calls for. No job too small to do right.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-copy rv">
+        <p class="kicker">Why homeowners call us</p>
+        <h2>One contractor.<br>One point of contact.<br>No runaround.</h2>
+        <p>Most remodel horror stories have the same plot: five different trades, nobody in charge, and a homeowner playing project manager. Generation Contractor runs the job the other way — <b>one crew, one schedule, one person who answers when you call.</b></p>
+        <ul class="why-list">
+          <li><span class="n">01</span><div><h3>A real person answers</h3><p>Call (561) 283-6643 and you reach the contractor — not a call center, not a sales rep who disappears after the deposit.</p></div></li>
+          <li><span class="n">02</span><div><h3>Written quotes, no surprises</h3><p>You get the scope and the price in writing before work starts. Changes get priced and approved before they happen — never after.</p></div></li>
+          <li><span class="n">03</span><div><h3>Permits &amp; inspections handled</h3><p>We pull the permits, schedule the inspections, and build to Palm Beach County code, so the paperwork never lands on you.</p></div></li>
+          <li><span class="n">04</span><div><h3>Local, and quick to your door</h3><p>Based right here in Wellington. When something needs eyes on it, we're minutes away — not dispatching from another county.</p></div></li>
+        </ul>
+      </div>
+      <aside class="call-card rv">
+        <p class="cc-k">Start your project</p>
+        <h3>Tell us what you're building</h3>
+        <p>Kitchens, bathrooms, additions, whole-home renovations — the first conversation and the on-site estimate are free.</p>
+        <p class="big"><a href="tel:+15612836643">(561) 283-6643</a></p>
+        <a class="btn" href="#contact">Request a Free Quote</a>
+        <p class="hrs"><b>Hours</b><br>
+        Monday: 8:00 AM – 5:00 PM<br>
+        Tuesday – Thursday: 7:00 AM – 5:00 PM<br>
+        Friday: 8:00 AM – 5:00 PM</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">How it works</p>
+      <h2>From first call to final walkthrough</h2>
+      <p>A remodel doesn't have to be chaos. Here's the order of operations on every job we take.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">i.</div><h3>We talk</h3><p>Call or send the form. Tell us what you're picturing — we'll ask the right questions and set a time to see the space.</p></div>
+      <div class="step rv"><div class="n">ii.</div><h3>On-site estimate</h3><p>We measure, look at the structure, and talk through options and finishes at your home. Free, no pressure.</p></div>
+      <div class="step rv"><div class="n">iii.</div><h3>Written quote</h3><p>Scope, materials, timeline, and price — in writing. You approve it before a single tool comes out.</p></div>
+      <div class="step rv"><div class="n">iv.</div><h3>We build</h3><p>Permits pulled, site kept clean, progress kept visible. We finish with a walkthrough together — not a wave goodbye.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section id="areas" class="areas">
+  <div class="wrap">
+    <p class="kicker rv">Where we work</p>
+    <h2 class="rv">Proudly serving Wellington &amp; Palm Beach County</h2>
+    <p class="lead rv">Generation Contractor LLC is based in Wellington and takes projects across the western and central communities of Palm Beach County. Don't see your town? Call — if we can get a crew there, we'll tell you straight.</p>
+    <div class="towns rv">
+      <span class="home">Wellington</span>
+      <span>Royal Palm Beach</span>
+      <span>Loxahatchee</span>
+      <span>The Acreage</span>
+      <span>West Palm Beach</span>
+      <span>Palm Beach Gardens</span>
+      <span>Lake Worth Beach</span>
+      <span>Greenacres</span>
+      <span>Palm Springs</span>
+      <span>Boynton Beach</span>
+      <span>Delray Beach</span>
+      <span>Boca Raton</span>
+    </div>
+    <p class="note rv">Headquartered at 13972 Folkestone Cir, Wellington, FL.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="c-info rv">
+        <p class="kicker">Contact</p>
+        <h2>Get your free quote</h2>
+        <p>Call, or send the form and tell us about the project. We reply during business hours — usually the same day.</p>
+        <div class="row"><span class="lab">Phone</span><p><a href="tel:+15612836643">(561) 283-6643</a></p></div>
+        <div class="row"><span class="lab">Based in</span><p>13972 Folkestone Cir<br>Wellington, FL</p></div>
+        <div class="row"><span class="lab">Hours</span><p>Mon 8–5 &middot; Tue–Thu 7–5 &middot; Fri 8–5</p></div>
+      </div>
+      <!--
+        FORM ENDPOINT (demo): this form is FormSubmit-ready, matching the production pattern.
+        Before launch, replace the placeholder in the script below with the client's real inbox:
+        https://formsubmit.co/ajax/<client-email>
+      -->
+      <form id="quoteForm" class="rv" novalidate>
+        <label style="margin-top:0">Name</label>
+        <div class="f-row">
+          <div><span class="sub">First Name (required)</span><input type="text" name="first_name" required autocomplete="given-name"></div>
+          <div><span class="sub">Last Name (required)</span><input type="text" name="last_name" required autocomplete="family-name"></div>
+        </div>
+        <label>Contact Number</label>
+        <input type="tel" name="phone" autocomplete="tel">
+        <label>Email <span class="req">(required)</span></label>
+        <input type="email" name="email" required autocomplete="email">
+        <label>Project Type</label>
+        <select name="project_type">
+          <option value="">Choose one…</option>
+          <option>Kitchen remodel</option>
+          <option>Bathroom remodel</option>
+          <option>Whole-home renovation</option>
+          <option>Home addition</option>
+          <option>Outdoor living</option>
+          <option>Repairs / other project</option>
+        </select>
+        <label>Tell Us About the Project <span class="req">(required)</span></label>
+        <textarea name="message" required placeholder="What are you looking to build or remodel? Rough size, timing, anything that helps…"></textarea>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <button class="btn" type="submit">Request My Free Quote</button>
+        <p class="form-msg" id="quoteMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="flogo">Generation <span>Contractor</span> LLC</p>
+    <p>General contracting in Wellington, Florida — remodels, renovations, additions.<br>Call <a href="tel:+15612836643">(561) 283-6643</a></p>
+    <p class="f-areas">Wellington · Royal Palm Beach · Loxahatchee · The Acreage · West Palm Beach · Palm Beach Gardens · Lake Worth Beach · Greenacres · Palm Springs · Boynton Beach · Delray Beach · Boca Raton</p>
+    <p class="fine">&copy; 2026 Generation Contractor LLC · 13972 Folkestone Cir, Wellington, FL</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+15612836643">&#128222; Call (561) 283-6643</a>
+
+<button class="chat-btn" id="chatBtn" type="button" aria-label="Chat with Generation Contractor">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4V5a2 2 0 0 1 2-2z" transform="translate(-1 1)"/></svg>
+</button>
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Send Generation Contractor a message">
+  <div class="cp-head"><b>Generation Contractor LLC</b><span>Send us a message — it lands right in our email, and we'll get back to you.</span></div>
+  <form id="chatForm" novalidate>
+    <label>Your name</label>
+    <input type="text" name="name" required autocomplete="name">
+    <label>Phone or email</label>
+    <input type="text" name="contact" required>
+    <label>How can we help?</label>
+    <textarea name="message" required></textarea>
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <button class="btn" type="submit">Send Message</button>
+    <p class="form-msg" id="chatMsg" role="status" aria-live="polite"></p>
+  </form>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============================================================
+     FORM ENDPOINT — PLACEHOLDER (demo build, not connected)
+     Before this site goes live, replace YOUR-EMAIL-HERE with the
+     client's real inbox. Pattern: https://formsubmit.co/ajax/<email>
+     Until then, submissions cannot deliver and the forms fall back
+     to a "please call" message — by design.
+     ============================================================ */
+  var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/YOUR-EMAIL-HERE';
+
+  /* mobile menu */
+  var menu=document.getElementById('menu'),toggle=document.getElementById('toggle');
+  function setMenu(open){menu.classList.toggle('open',open);menu.setAttribute('aria-hidden',String(!open));toggle.setAttribute('aria-expanded',String(open));}
+  toggle.addEventListener('click',function(){setMenu(true);});
+  document.getElementById('mclose').addEventListener('click',function(){setMenu(false);});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+
+  /* reveal on scroll */
+  var rvEls=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    rvEls.forEach(function(el){io.observe(el);});
+  } else { rvEls.forEach(function(el){el.classList.add('in');}); }
+
+  /* form sending — full customer details ride along (production pattern) */
+  function sendForm(data,msgEl,formEl){
+    msgEl.className='form-msg';msgEl.textContent='Sending…';msgEl.style.display='block';
+    fetch(FORMSUBMIT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+    .then(function(r){return r.json();})
+    .then(function(j){
+      if(j && (j.success===true||j.success==='true')){msgEl.className='form-msg ok';msgEl.textContent='Thank you! We\u2019ll reach out shortly to talk through your project. Please keep your phone handy.';formEl.reset();}
+      else{throw new Error('send failed');}
+    })
+    .catch(function(){msgEl.className='form-msg err';msgEl.textContent='That didn\u2019t go through — please call (561) 283-6643 and we\u2019ll take care of you.';});
+  }
+  document.getElementById('quoteForm').addEventListener('submit',function(e){
+    e.preventDefault();var f=e.target;
+    if(!f.first_name.value||!f.last_name.value||!f.email.value||!f.message.value){var m=document.getElementById('quoteMsg');m.className='form-msg err';m.textContent='Please fill in your name, email, and a few words about the project.';return;}
+    sendForm({name:f.first_name.value+' '+f.last_name.value,first_name:f.first_name.value,last_name:f.last_name.value,phone:f.phone.value,email:f.email.value,_replyto:f.email.value,project_type:f.project_type.value,message:f.message.value,project_details:f.message.value,customer_details:'CUSTOMER DETAILS\nName: '+f.first_name.value+' '+f.last_name.value+'\nPhone: '+(f.phone.value||'(not given)')+'\nEmail: '+f.email.value+'\nProject type: '+(f.project_type.value||'(not chosen)')+'\nMessage: '+f.message.value,_subject:'New quote request — Generation Contractor website',_template:'table',_captcha:'false',_honey:f._honey.value},document.getElementById('quoteMsg'),f);
+  });
+
+  /* chat box */
+  var panel=document.getElementById('chatPanel');
+  document.getElementById('chatBtn').addEventListener('click',function(){panel.classList.toggle('open');});
+  document.getElementById('chatForm').addEventListener('submit',function(e){
+    e.preventDefault();var f=e.target;
+    if(!f.name.value||!f.contact.value||!f.message.value){var m=document.getElementById('chatMsg');m.className='form-msg err';m.textContent='Add your name, a phone or email, and your message.';return;}
+    sendForm({name:f.name.value,contact:f.contact.value,message:f.message.value,customer_details:'CUSTOMER DETAILS\nName: '+f.name.value+'\nContact: '+f.contact.value+'\nMessage: '+f.message.value,_subject:'New chat message — Generation Contractor website',_template:'table',_captcha:'false',_honey:f._honey.value},document.getElementById('chatMsg'),f);
+  });
+})();
+</script>
+</body>
+</html>
